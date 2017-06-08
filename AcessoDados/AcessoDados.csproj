@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12257150-9445-4212-8B09-A8D5186862D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AcessoDados</RootNamespace>
+    <AssemblyName>AcessoDados</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CadastroFuncionarioContext.cs" />
+    <Compile Include="Mappers\DomainToViewModelMappingProfile.cs" />
+    <Compile Include="Mappers\ViewModelToDomainMappingProfile.cs" />
+    <Compile Include="Migrations\201705191749260_InitialCreate.cs" />
+    <Compile Include="Migrations\201705191749260_InitialCreate.Designer.cs">
+      <DependentUpon>201705191749260_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231303514_ChangeNomeCargotoNomeArea.cs" />
+    <Compile Include="Migrations\201705231303514_ChangeNomeCargotoNomeArea.Designer.cs">
+      <DependentUpon>201705231303514_ChangeNomeCargotoNomeArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231505090_AddDataNascimentoinFuncionario.cs" />
+    <Compile Include="Migrations\201705231505090_AddDataNascimentoinFuncionario.Designer.cs">
+      <DependentUpon>201705231505090_AddDataNascimentoinFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231524406_AddDataNascimentoinFuncionario1.cs" />
+    <Compile Include="Migrations\201705231524406_AddDataNascimentoinFuncionario1.Designer.cs">
+      <DependentUpon>201705231524406_AddDataNascimentoinFuncionario1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231712442_AddDataNascimentoinFuncionario2.cs" />
+    <Compile Include="Migrations\201705231712442_AddDataNascimentoinFuncionario2.Designer.cs">
+      <DependentUpon>201705231712442_AddDataNascimentoinFuncionario2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231717005_CPFLenght.cs" />
+    <Compile Include="Migrations\201705231717005_CPFLenght.Designer.cs">
+      <DependentUpon>201705231717005_CPFLenght.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231913523_FixDbModel.cs" />
+    <Compile Include="Migrations\201705231913523_FixDbModel.Designer.cs">
+      <DependentUpon>201705231913523_FixDbModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705241308307_ChangeManagerNoRequired.cs" />
+    <Compile Include="Migrations\201705241308307_ChangeManagerNoRequired.Designer.cs">
+      <DependentUpon>201705241308307_ChangeManagerNoRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705261525491_FixTypeCEP.cs" />
+    <Compile Include="Migrations\201705261525491_FixTypeCEP.Designer.cs">
+      <DependentUpon>201705261525491_FixTypeCEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705261637344_FixTypeGestorId.cs" />
+    <Compile Include="Migrations\201705261637344_FixTypeGestorId.Designer.cs">
+      <DependentUpon>201705261637344_FixTypeGestorId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705301628587_AddStringSexo.cs" />
+    <Compile Include="Migrations\201705301628587_AddStringSexo.Designer.cs">
+      <DependentUpon>201705301628587_AddStringSexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{0df316c0-2cca-44d7-a845-d3050266c426}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\ViewModel.csproj">
+      <Project>{881fc5f7-018b-44e6-ac94-f95b676daceb}</Project>
+      <Name>ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705191749260_InitialCreate.resx">
+      <DependentUpon>201705191749260_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231303514_ChangeNomeCargotoNomeArea.resx">
+      <DependentUpon>201705231303514_ChangeNomeCargotoNomeArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231505090_AddDataNascimentoinFuncionario.resx">
+      <DependentUpon>201705231505090_AddDataNascimentoinFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231524406_AddDataNascimentoinFuncionario1.resx">
+      <DependentUpon>201705231524406_AddDataNascimentoinFuncionario1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231712442_AddDataNascimentoinFuncionario2.resx">
+      <DependentUpon>201705231712442_AddDataNascimentoinFuncionario2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231717005_CPFLenght.resx">
+      <DependentUpon>201705231717005_CPFLenght.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231913523_FixDbModel.resx">
+      <DependentUpon>201705231913523_FixDbModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705241308307_ChangeManagerNoRequired.resx">
+      <DependentUpon>201705241308307_ChangeManagerNoRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705261525491_FixTypeCEP.resx">
+      <DependentUpon>201705261525491_FixTypeCEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705261637344_FixTypeGestorId.resx">
+      <DependentUpon>201705261637344_FixTypeGestorId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705301628587_AddStringSexo.resx">
+      <DependentUpon>201705301628587_AddStringSexo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,103 @@
+﻿@model ViewModel.Funcionario
+
+@{
+    ViewBag.Title = "Deletar";
+}
+
+<h2>Deletar</h2>
+
+<h3>Você deseja deletar esse funcionário?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco.Logradouro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco.Logradouro)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco.Complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco.Complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco.Cep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco.Cep)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo.NomeCargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo.NomeCargo)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo.Area.NomeArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo.Area.NomeArea)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Beneficios)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beneficios)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

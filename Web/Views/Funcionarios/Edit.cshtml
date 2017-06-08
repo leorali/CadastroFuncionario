@@ -1,0 +1,32 @@
+﻿@model ViewModel.Funcionario
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Editar funcionário</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.EditorForModel()
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    <script>
+    $(document).ready(function () {
+    $("#DataNascimento").inputmask("99/99/9999");
+    $("#Cpf").inputmask("999.999.999-99");
+    $("#Endereco_Cep").inputmask("99999-999");
+    });
+
+    </script>
+    
+}

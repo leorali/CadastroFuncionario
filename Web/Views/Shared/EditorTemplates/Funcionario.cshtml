@@ -1,0 +1,62 @@
+﻿@model ViewModel.Funcionario
+
+    
+<div class="form-horizontal">
+    <h5>Dados Gerais</h5>
+    @Html.HiddenFor(model => model.Id)
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Cpf, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Cpf, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.DataNascimento, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Sexo, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
+            Masculino: @Html.RadioButtonFor(m => m.Sexo, "M")
+            Feminino: @Html.RadioButtonFor(m => m.Sexo, "F")
+        </div>
+    </div>
+
+    <hr />
+    <h5>Endereço</h5>
+
+    @Html.EditorFor(model => model.Endereco)
+
+    <hr />
+    <h5>Lotação</h5>
+
+    @Html.EditorFor(model => model.Cargo)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Gestor.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.GestorId, (SelectList)ViewBag.GestoresSelectList, "Selecione o gestor")
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Cadastrar" class="btn btn-default" />
+    </div>
+</div>
+

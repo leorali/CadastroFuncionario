@@ -1,0 +1,25 @@
+﻿@model ViewModel.Area
+
+@{
+    var areas = (List<string>)ViewBag.AreaList;
+}
+
+<div class="form-group">
+    @Html.LabelFor(model => model.NomeArea, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.ValidationMessageFor(model => model.NomeArea, "", new { @class = "text-danger" })
+        @Html.TextBoxFor(model => model.NomeArea, new { list = "areas" })
+        @if (areas != null)
+        {
+            <datalist id="areas">
+
+                @foreach (var area in areas)
+                {
+                    <option value="@area"> </option>
+                }
+            </datalist>
+        }
+
+
+    </div>
+</div>

@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cliente", "Cliente", "{2B27A717-60F7-493E-A871-1AC5FCA52F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{F5FA3F43-1917-4B1E-A672-55E022B81120}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RegraDeNegocio", "RegraDeNegocio", "{BC548EA8-C426-4248-B7DB-5A413814D692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{0DF316C0-2CCA-44D7-A845-D3050266C426}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servidor", "Servidor", "{2E4FAF6A-EAC6-4919-BB95-A7987B02DBA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcessoDados", "AcessoDados\AcessoDados.csproj", "{12257150-9445-4212-8B09-A8D5186862D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{881FC5F7-018B-44E6-AC94-F95B676DACEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5FA3F43-1917-4B1E-A672-55E022B81120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FA3F43-1917-4B1E-A672-55E022B81120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FA3F43-1917-4B1E-A672-55E022B81120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FA3F43-1917-4B1E-A672-55E022B81120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DF316C0-2CCA-44D7-A845-D3050266C426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF316C0-2CCA-44D7-A845-D3050266C426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF316C0-2CCA-44D7-A845-D3050266C426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF316C0-2CCA-44D7-A845-D3050266C426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12257150-9445-4212-8B09-A8D5186862D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12257150-9445-4212-8B09-A8D5186862D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12257150-9445-4212-8B09-A8D5186862D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12257150-9445-4212-8B09-A8D5186862D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881FC5F7-018B-44E6-AC94-F95B676DACEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881FC5F7-018B-44E6-AC94-F95B676DACEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881FC5F7-018B-44E6-AC94-F95B676DACEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881FC5F7-018B-44E6-AC94-F95B676DACEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5FA3F43-1917-4B1E-A672-55E022B81120} = {2B27A717-60F7-493E-A871-1AC5FCA52F42}
+		{0DF316C0-2CCA-44D7-A845-D3050266C426} = {BC548EA8-C426-4248-B7DB-5A413814D692}
+		{12257150-9445-4212-8B09-A8D5186862D1} = {2E4FAF6A-EAC6-4919-BB95-A7987B02DBA8}
+		{881FC5F7-018B-44E6-AC94-F95B676DACEB} = {2B27A717-60F7-493E-A871-1AC5FCA52F42}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://monitoracar.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Negocio\\Negocio.csproj
+		SccProjectTopLevelParentUniqueName1 = CadastrodeFuncionarios.sln
+		SccProjectName1 = Negocio
+		SccLocalPath1 = Negocio
+		SccProjectUniqueName2 = ViewModel\\ViewModel.csproj
+		SccProjectTopLevelParentUniqueName2 = CadastrodeFuncionarios.sln
+		SccProjectName2 = ViewModel
+		SccLocalPath2 = ViewModel
+		SccProjectUniqueName3 = AcessoDados\\AcessoDados.csproj
+		SccProjectTopLevelParentUniqueName3 = CadastrodeFuncionarios.sln
+		SccProjectName3 = AcessoDados
+		SccLocalPath3 = AcessoDados
+		SccProjectUniqueName4 = Web\\Web.csproj
+		SccProjectTopLevelParentUniqueName4 = CadastrodeFuncionarios.sln
+		SccProjectName4 = Web
+		SccLocalPath4 = Web
+	EndGlobalSection
+EndGlobal

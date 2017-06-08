@@ -1,0 +1,27 @@
+﻿@model ViewModel.Cargo
+
+@{
+    var cargos = (List<string>)ViewBag.cargoList;
+}
+
+<div class="form-group">
+    @Html.LabelFor(model => model.NomeCargo, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.ValidationMessageFor(model => model.NomeCargo, "", new { @class = "text-danger" })
+        @Html.TextBoxFor(model => model.NomeCargo, new { list = "cargos" })
+        @if (cargos != null)
+        {
+            <datalist id="cargos">
+                @foreach (var cargo in cargos)
+                {
+                    <option value="@cargo"> </option>
+                }
+
+            </datalist>
+        }
+
+
+    </div>
+</div>
+
+@Html.EditorFor(model => model.Area)

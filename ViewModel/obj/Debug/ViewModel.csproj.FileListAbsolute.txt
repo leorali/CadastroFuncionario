@@ -1,0 +1,10 @@
+C:\Users\Leonardo\documents\visual studio 2017\Projects\CadastrodeFuncionarios\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\documents\visual studio 2017\Projects\CadastrodeFuncionarios\ViewModel\bin\Debug\ViewModel.dll
+C:\Users\Leonardo\documents\visual studio 2017\Projects\CadastrodeFuncionarios\ViewModel\bin\Debug\ViewModel.pdb
+C:\Users\Leonardo\documents\visual studio 2017\Projects\CadastrodeFuncionarios\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\Leonardo\documents\visual studio 2017\Projects\CadastrodeFuncionarios\ViewModel\obj\Debug\ViewModel.pdb
+C:\Users\Leonardo\Documents\Visual Studio 2017\Projects\CapacitacaoCadastroFuncionario\CadastrodeFuncionarios\ViewModel\bin\Debug\ViewModel.dll
+C:\Users\Leonardo\Documents\Visual Studio 2017\Projects\CapacitacaoCadastroFuncionario\CadastrodeFuncionarios\ViewModel\bin\Debug\ViewModel.pdb
+C:\Users\Leonardo\Documents\Visual Studio 2017\Projects\CapacitacaoCadastroFuncionario\CadastrodeFuncionarios\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Documents\Visual Studio 2017\Projects\CapacitacaoCadastroFuncionario\CadastrodeFuncionarios\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\Leonardo\Documents\Visual Studio 2017\Projects\CapacitacaoCadastroFuncionario\CadastrodeFuncionarios\ViewModel\obj\Debug\ViewModel.pdb

@@ -1,10 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Web.Mvc;
 using AcessoDados;
-using Negocio;
+using ViewModel;
+using Area = Negocio.Area;
+using Cargo = Negocio.Cargo;
+using Endereco = Negocio.Endereco;
+using Funcionario = Negocio.Funcionario;
 
 namespace Web.Controllers
 {
@@ -16,14 +22,31 @@ namespace Web.Controllers
         public ActionResult Index()
         {
             var funcionarios = Mapper.Map<IEnumerable<Funcionario>, IEnumerable<ViewModel.Funcionario>>(db.Funcionarios.ToList());
-            return View(funcionarios);
+            var funcionariosView = new FuncionariosView();
+            funcionariosView.Funcionarios = funcionarios;
+            ListaCargosCompleto();
+            ListaAreasCompleto();
+            return View(funcionariosView);
         }
 
+
+
         [HttpPost]
-        public ActionResult Index(string nome)
+        public ActionResult Index(string nome, int? pesquisaAreaId, int? pesquisaCargoId)
         {
-            var funcionarios = Mapper.Map<IEnumerable<Funcionario>, IEnumerable<ViewModel.Funcionario>>(db.Funcionarios.Where(f => f.Nome.Contains(nome)).OrderBy(f => f.Nome).ToList());
-            return View(funcionarios);
+            Expression<Func<Funcionario, bool>> filtro;
+
+                filtro = f => f.Nome.Contains(nome) &&
+                              (pesquisaCargoId == null || f.CargoId == pesquisaCargoId.Value) &&
+                              (pesquisaAreaId == null || f.Cargo.AreaId == pesquisaAreaId);
+              
+            var funcionarios = Mapper.Map<IEnumerable<Funcionario>, IEnumerable<ViewModel.Funcionario>>(db.Funcionarios.
+                Where(filtro).OrderBy(f => f.Nome).ToList());
+            var funcionariosView = new FuncionariosView {Funcionarios = funcionarios};
+            
+            ListaCargosCompleto();
+            ListaAreasCompleto();
+            return View(funcionariosView);
         }
 
         // GET: CadastroFuncionario/Details/5
@@ -47,6 +70,8 @@ namespace Web.Controllers
             ListaGestores();
             ListaAreas();
             ListaCargos();
+            ListaAreasCompleto();
+            ListaCargosCompleto();
         }
 
         // GET: CadastroFuncionario/Create
@@ -158,14 +183,16 @@ namespace Web.Controllers
         public void ListaAreas()
         {
             var areaList = db.Areas.Select(a => a.NomeArea).ToList();
-            var selectListAreas = new SelectList(areaList, "Id", "NomeArea");
-            ViewBag.AreasSelectList = selectListAreas;
+            ViewBag.AreaList = areaList;
         }
+
+        //meteodo lista area do pesquisa no index
 
         public void ListaAreasCompleto()
         {
             var areaList = db.Areas.ToList();
-            ViewBag.AreaList = areaList;
+            var selectListAreas = new SelectList(areaList, "Id", "NomeArea");
+            ViewBag.AreasSelectList = selectListAreas;
         }
 
         //metodo salvar funcionario
@@ -180,6 +207,7 @@ namespace Web.Controllers
 
             var cargo = funcionario.Cargo;
             var area = funcionario.Cargo.Area;
+            cargo.Area = null;
             funcionario.Cargo = null;
             var cargoModel = Mapper.Map<ViewModel.Cargo, Cargo>(cargo);
 
@@ -222,15 +250,17 @@ namespace Web.Controllers
         public void ListaCargos()
         {
             var cargoList = db.Cargos.Select(a => a.NomeCargo).ToList();
-            var selectListCargos = new SelectList(cargoList, "Id", "NomeCargo");
-            ViewBag.CargosSelectList = selectListCargos;
+            ViewBag.CargoList = cargoList;
 
             }
+
+        //meteodo lista cargo do pesquisa no index
 
         public void ListaCargosCompleto()
         {
             var cargoList = db.Cargos.ToList();
-            ViewBag.CargoList = cargoList;
+            var selectListCargos = new SelectList(cargoList, "Id", "NomeCargo");
+            ViewBag.CargosSelectList = selectListCargos;
         }
 
 

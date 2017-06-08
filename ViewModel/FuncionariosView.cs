@@ -10,8 +10,8 @@ namespace ViewModel
     {
         public IEnumerable<Funcionario> Funcionarios { get; set; }
 
-        public Guid PesquisaAreaId { get; set; }
+        public int? PesquisaAreaId { get; set; }
 
-        public Guid PesquisaCargoId { get; set; }
+        public int? PesquisaCargoId { get; set; }
     }
 }
